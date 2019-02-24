@@ -5,7 +5,7 @@ with open('README.rst') as f:
 
 setup(
     name='torrent-bencode',
-    version='0.1',
+    version='0.2',
     packages=['bencode'],
     url='https://github.com/kazimirovic/bencode',
     license='MIT',
