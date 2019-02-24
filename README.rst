@@ -48,6 +48,7 @@ This package also includes functions for 'compact' peer encoding as per bep 0023
 Usage:
 
 .. code-block:: python
+
     from bencode.misc import pack_compact_peers_list, unpack_compact_peers_list
 
     pack_compact_peers_list((('127.0.0.1', 8080), ('127.0.0.1', 9090)))
