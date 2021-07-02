@@ -110,7 +110,9 @@ def decode_from_io(f: BinaryIO):
             if char == b'':
                 raise InvalidBencode.eof()
             if not char.isdigit():
-                raise InvalidBencode.at_position('Expected int, got %s' % str(char), f.tell())
+                # Allow '-' as the first character
+                if char != b'-' or digits != b'':
+                    raise InvalidBencode.at_position('Expected int, got %s' % str(char), f.tell())
             digits += char
         return int(digits)
 
